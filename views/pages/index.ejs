@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Fields Guesthouse</title>
+
+    <!-- External Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Golden Fields</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#rooms">Rooms</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#facilities">Facilities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center" id="hero" data-aos="fade-up">
+        <h1>Welcome to Golden Fields Guesthouse</h1>
+        <p>Your peaceful escape awaits.</p>
+        <a href="#contact" class="cta-button">Book Your Stay</a>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="about-image">
+                        <img src="https://images.pexels.com/photos/1749303/pexels-photo-1749303.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Serenade Palace" class="img-fluid rounded shadow-lg">
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="about-text">
+                        <h2 class="section-title">About Serenade Palace</h2>
+                        <p class="about-description">
+                            Welcome to Serenade Palace, a place where luxury meets tranquility. With stunning views and world-class amenities, we offer the perfect escape for those seeking comfort and elegance.
+                        </p>
+                        <p class="about-description">
+                            From our spacious rooms to our attentive staff, every aspect of Serenade Palace is designed to provide you with an unforgettable experience. Whether you’re here for business or leisure, our hotel is the perfect choice for your next stay.
+                        </p>
+                        <a href="#services" class="btn btn-primary">Discover Our Services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
+
+    <section id="gallery" class="room-gallery">
+        <div class="container">
+            <div class="section-title text-center" data-aos="fade-up">
+                <h2>Our Rooms</h2>
+                <p>Discover the luxury of Serenade Palace</p>
+            </div>
+            <div class="room-grid" data-aos="fade-up" data-aos-delay="200">
+                <div class="room-item large-item">
+                    <a href="path-to-image-1.jpg" class="room-link" data-fancybox="gallery" data-caption="Luxury Suite - $150/night">
+                        <div class="room-image">
+                            <img src="https://images.pexels.com/photos/2725675/pexels-photo-2725675.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Luxury Suite" class="img-fluid">
+                        </div>
+                        <div class="room-details">
+                            <h3 class="room-title">Luxury Suite</h3>
+                            <p class="room-description">Spacious suite with king-size bed and stunning views.</p>
+                            <span class="room-price">$150/night</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="room-item medium-item">
+                    <a href="path-to-image-2.jpg" class="room-link" data-fancybox="gallery" data-caption="Ocean View Room - $120/night">
+                        <div class="room-image">
+                            <img src="https://images.pexels.com/photos/2725675/pexels-photo-2725675.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Ocean View Room" class="img-fluid">
+                        </div>
+                        <div class="room-details">
+                            <h3 class="room-title">Ocean View Room</h3>
+                            <p class="room-description">Beautiful room with breathtaking ocean views.</p>
+                            <span class="room-price">$120/night</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="room-item small-item">
+                    <a href="path-to-image-3.jpg" class="room-link" data-fancybox="gallery" data-caption="Garden Suite - $130/night">
+                        <div class="room-image">
+                            <img src="https://images.pexels.com/photos/2725675/pexels-photo-2725675.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Garden Suite" class="img-fluid">
+                        </div>
+                        <div class="room-details">
+                            <h3 class="room-title">Garden Suite</h3>
+                            <p class="room-description">Cozy suite with a private garden view.</p>
+                            <span class="room-price">$130/night</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="room-item small-item">
+                    <a href="path-to-image-3.jpg" class="room-link" data-fancybox="gallery" data-caption="Garden Suite - $130/night">
+                        <div class="room-image">
+                            <img src="https://images.pexels.com/photos/2725675/pexels-photo-2725675.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Garden Suite" class="img-fluid">
+                        </div>
+                        <div class="room-details">
+                            <h3 class="room-title">Garden Suite</h3>
+                            <p class="room-description">Cozy suite with a private garden view.</p>
+                            <span class="room-price">$130/night</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="room-item small-item">
+                    <a href="path-to-image-3.jpg" class="room-link" data-fancybox="gallery" data-caption="Garden Suite - $130/night">
+                        <div class="room-image">
+                            <img src="https://images.pexels.com/photos/2725675/pexels-photo-2725675.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Garden Suite" class="img-fluid">
+                        </div>
+                        <div class="room-details">
+                            <h3 class="room-title">Garden Suite</h3>
+                            <p class="room-description">Cozy suite with a private garden view.</p>
+                            <span class="room-price">$130/night</span>
+                        </div>
+                    </a>
+                </div>
+                <!-- Add more rooms with different item classes -->
+            </div>
+        </div>
+    </section>
+
+    <section id="facilities" class="facilities">
+        <div class="container">
+            <div class="section-title text-center" data-aos="fade-up">
+                <h2>Our Facilities</h2>
+                <p>Experience world-class amenities at Serenade Palace</p>
+            </div>
+            <div class="row">
+                <!-- Facility 1 -->
+                <div class="col-md-4 facility-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="facility-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <div class="facility-info">
+                        <h4 class="facility-title">Spa & Wellness</h4>
+                        <p class="facility-description">Unwind and rejuvenate at our luxurious spa with professional treatments.</p>
+                    </div>
+                </div>
+                <!-- Facility 2 -->
+                <div class="col-md-4 facility-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="facility-icon">
+                        <i class="fas fa-pool"></i>
+                    </div>
+                    <div class="facility-info">
+                        <h4 class="facility-title">Infinity Pool</h4>
+                        <p class="facility-description">Take a dip in our stunning infinity pool with panoramic views.</p>
+                    </div>
+                </div>
+                <!-- Facility 3 -->
+                <div class="col-md-4 facility-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="facility-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <div class="facility-info">
+                        <h4 class="facility-title">Fitness Center</h4>
+                        <p class="facility-description">Stay fit and healthy with state-of-the-art equipment at our fitness center.</p>
+                    </div>
+                </div>
+                <!-- Facility 4 -->
+                <div class="col-md-4 facility-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="facility-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="facility-info">
+                        <h4 class="facility-title">Gourmet Dining</h4>
+                        <p class="facility-description">Indulge in exquisite dishes prepared by our expert chefs in a luxurious setting.</p>
+                    </div>
+                </div>
+                <!-- Facility 5 -->
+                <div class="col-md-4 facility-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="facility-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <div class="facility-info">
+                        <h4 class="facility-title">High-Speed Wi-Fi</h4>
+                        <p class="facility-description">Enjoy fast and reliable internet throughout the entire hotel.</p>
+                    </div>
+                </div>
+                <!-- Facility 6 -->
+                <div class="col-md-4 facility-item" data-aos="fade-up" data-aos-delay="600">
+                    <div class="facility-icon">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <div class="facility-info">
+                        <h4 class="facility-title">Transport Service</h4>
+                        <p class="facility-description">We provide comfortable transport options for your convenience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title text-center" data-aos="fade-up">
+                <h2>Contact Us</h2>
+                <p>Get in touch with us for bookings or inquiries</p>
+            </div>
+            <div class="row">
+                <!-- Contact Details -->
+                <div class="col-lg-6 contact-info" data-aos="fade-right" data-aos-delay="100">
+                    <h4>Our Contact Information</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Serenade Palace, 123 Dreamland Avenue, Cityville</p>
+                    <p><i class="fas fa-phone"></i> +123 456 7890</p>
+                    <p><i class="fas fa-envelope"></i> info@serenadepalace.com</p>
+                </div>
+                <!-- Contact Form -->
+                <div class="col-lg-6 contact-form" data-aos="fade-left" data-aos-delay="200">
+                    <h4>Send Us a Message</h4>
+                    <form action="/submit-form" method="POST" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" class="form-control" rows="5" placeholder="Your message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Modern Footer Section -->
+    <footer class="footer bg-dark text-light py-5">
+        <div class="container text-center">
+            <h5>Golden Fields Guesthouse</h5>
+            <p class="mb-4">Escape to tranquility at Golden Fields, your perfect getaway destination.</p>
+
+            <!-- Footer Navigation Links -->
+            <div class="footer-links mb-4">
+                <a href="#" class="text-light me-3">Home</a>
+                <a href="#about" class="text-light me-3">About</a>
+                <a href="#rooms" class="text-light me-3">Rooms</a>
+                <a href="#contact" class="text-light">Contact</a>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="footer-socials mb-4">
+                <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-light"><i class="fab fa-youtube"></i></a>
+            </div>
+
+            <p>&copy; 2025 Golden Fields Guesthouse. All Rights Reserved.</p>
+            <p><a href="#" class="text-light">Privacy Policy</a> | <a href="#" class="text-light">Terms & Conditions</a></p>
+        </div>
+    </footer>
+
+    <!-- External JS Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+    <script>
+        // Initialize AOS
+AOS.init();
+
+// Initialize Swiper
+const swiper = new Swiper('.swiper-container', {
+    loop: true,
+    autoplay: {
+        delay: 3000,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});
+
+// Form Validation with Toastr Notifications
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    
+    if (!name || !email || !message) {
+        toastr.error('All fields are required!');
+    } else {
+        toastr.success('Message sent successfully!');
+        this.reset();
+    }
+});
+
+    </script>
+</body>
+</html>
