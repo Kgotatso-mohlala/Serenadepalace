@@ -193,7 +193,7 @@ h1, h2, h3 {
     }
 }
 /* Hero Section */
-.hero-section {
+/* .hero-section {
     height: 100vh;
     background-image: url('https://images.pexels.com/photos/842711/pexels-photo-842711.jpeg?auto=compress&cs=tinysrgb&w=600');
     background-size: cover;
@@ -204,7 +204,7 @@ h1, h2, h3 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
+} */
 
 .hero-section h1 {
     font-size: 4rem;
@@ -482,11 +482,17 @@ h1, h2, h3 {
 .facility-item {
     text-align: center;
     margin-bottom: 40px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
 }
 
 .facility-item:hover {
     transform: scale(1.05);
+    background-color: #ff7f00;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* Facility Icon Styling */
@@ -498,7 +504,7 @@ h1, h2, h3 {
 }
 
 .facility-item:hover .facility-icon {
-    color: #555;
+    color: #fff;
 }
 
 /* Facility Title */
@@ -507,6 +513,11 @@ h1, h2, h3 {
     font-weight: bold;
     margin-bottom: 10px;
     color: #333;
+    transition: color 0.3s ease;
+}
+
+.facility-item:hover .facility-title {
+    color: #fff;
 }
 
 /* Facility Description */
@@ -514,6 +525,11 @@ h1, h2, h3 {
     font-size: 1rem;
     color: #777;
     line-height: 1.5;
+    transition: color 0.3s ease;
+}
+
+.facility-item:hover .facility-description {
+    color: #fff;
 }
 
 /* AOS Animation */
@@ -525,6 +541,11 @@ h1, h2, h3 {
 .facility-item[data-aos="fade-up"].aos-animate {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Hover Animation */
+.facility-item:hover .facility-info {
+    transform: translateY(-10px);
 }
 
 /* Mobile Responsiveness */

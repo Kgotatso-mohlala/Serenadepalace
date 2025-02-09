@@ -74,4 +74,5 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(() => errorToast.classList.remove('show'), 3000);
       }
     });
+
 });

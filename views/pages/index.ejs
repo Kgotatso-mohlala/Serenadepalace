@@ -9,8 +9,10 @@
     <%- include("../partials/_nav.ejs") %>
 
     <!-- Hero Section -->
-    <section class="hero-section text-center" id="hero" data-aos="fade-up">
-        <h1>Welcome to Golden Fields Guesthouse</h1>
+    <section class="hero-section text-center jumbotron" id="hero" data-aos="fade-up" style="background: url('https://unsplash.it/1920/1200?image=249') repeat bottom; background-size: cover;"
+    data-paroller-factor="0.3"
+    data-paroller-direction="horizontal">
+        <h1>Welcome to Serenade Palace</h1>
         <p>Your peaceful escape awaits.</p>
         <a href="#contact" class="cta-button">Book Your Stay</a>
     </section>
@@ -117,7 +119,7 @@
                 <h2>Our Facilities</h2>
                 <p>Experience world-class amenities at Serenade Palace</p>
             </div>
-            <div class="row">
+            <div class="row facilities-box">
                 <!-- Facility 1 -->
                 <div class="col-md-4 facility-item" data-aos="fade-up" data-aos-delay="100">
                     <div class="facility-icon">
@@ -222,7 +224,7 @@
     <!-- Modern Footer Section -->
     <footer class="footer bg-dark text-light py-5">
         <div class="container text-center">
-            <h5>Golden Fields Guesthouse</h5>
+            <h5>Serenade Palace</h5>
             <p class="mb-4">Escape to tranquility at Golden Fields, your perfect getaway destination.</p>
 
             <!-- Footer Navigation Links -->
@@ -241,7 +243,7 @@
                 <a href="#" class="text-light"><i class="fab fa-youtube"></i></a>
             </div>
 
-            <p>&copy; 2025 Golden Fields Guesthouse. All Rights Reserved.</p>
+            <p>&copy; 2025 Serenade Palace. All Rights Reserved.</p>
             <p><a href="#" class="text-light">Privacy Policy</a> | <a href="#" class="text-light">Terms & Conditions</a></p>
         </div>
     </footer>
@@ -254,6 +256,7 @@
     <!-- Custom JS -->
     <script src="script.js"></script>
     <script>
+        $('.jumbotron').paroller();
         // Initialize AOS
 AOS.init();
 
