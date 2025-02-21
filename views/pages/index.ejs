@@ -9,29 +9,40 @@
     <%- include("../partials/_nav.ejs") %>
 
     <!-- Hero Section -->
-    <section class="hero-section text-center jumbotron" id="hero" data-aos="fade-up" style="background: url('https://unsplash.it/1920/1200?image=249') repeat bottom; background-size: cover;"
-    data-paroller-factor="0.3"
-    data-paroller-direction="horizontal">
-        <h1>Welcome to Serenade Palace</h1>
-        <p>Your peaceful escape awaits.</p>
-        <a href="#contact" class="cta-button">Book Your Stay</a>
+    <section class="hero-section">
+        <div class="paroller-container">
+            <div class="paroller-image">
+                <img src="https://unsplash.it/1920/1200?image=249" alt="Hero Background" />
+            </div>
+            <div class="paroller-image-second">
+                <img src="https://unsplash.it/1920/1200?image=249" alt="Second Background" />
+            </div>
+        </div>
+    
+        <div class="hero-content">
+            <h1>Welcome to Serenade Palace</h1>
+            <p>Your peaceful escape awaits.</p>
+            <a href="#contact" class="cta-button">Book Your Stay</a>
+        </div>
     </section>
 
     <section id="about" class="about-section">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6" data-aos="fade-right">
+                <!-- About Image -->
+                <div class="col-lg-6" data-aos="fade-up">
                     <div class="about-image">
                         <img src="https://images.pexels.com/photos/1749303/pexels-photo-1749303.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Serenade Palace" class="img-fluid rounded shadow-lg">
                     </div>
                 </div>
-                <div class="col-lg-6" data-aos="fade-left">
+                <!-- About Text -->
+                <div class="col-lg-6" data-aos="fade-up">
                     <div class="about-text">
                         <h2 class="section-title">About Serenade Palace</h2>
-                        <p class="about-description">
+                        <p>
                             Welcome to Serenade Palace, a place where luxury meets tranquility. With stunning views and world-class amenities, we offer the perfect escape for those seeking comfort and elegance.
                         </p>
-                        <p class="about-description">
+                        <p>
                             From our spacious rooms to our attentive staff, every aspect of Serenade Palace is designed to provide you with an unforgettable experience. Whether you’re here for business or leisure, our hotel is the perfect choice for your next stay.
                         </p>
                         <a href="#services" class="btn btn-primary">Discover Our Services</a>
@@ -39,79 +50,56 @@
                 </div>
             </div>
         </div>
-    </section>    
-
-    <section id="gallery" class="room-gallery">
-        <div class="container">
-            <div class="section-title text-center" data-aos="fade-up">
-                <h2>Our Rooms</h2>
-                <p>Discover the luxury of Serenade Palace</p>
-            </div>
-            <div class="room-grid" data-aos="fade-up" data-aos-delay="200">
-                <div class="room-item large-item">
-                    <a href="path-to-image-1.jpg" class="room-link" data-fancybox="gallery" data-caption="Luxury Suite - $150/night">
-                        <div class="room-image">
-                            <img src="https://images.pexels.com/photos/2725675/pexels-photo-2725675.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Luxury Suite" class="img-fluid">
-                        </div>
-                        <div class="room-details">
-                            <h3 class="room-title">Luxury Suite</h3>
-                            <p class="room-description">Spacious suite with king-size bed and stunning views.</p>
-                            <span class="room-price">$150/night</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="room-item medium-item">
-                    <a href="path-to-image-2.jpg" class="room-link" data-fancybox="gallery" data-caption="Ocean View Room - $120/night">
-                        <div class="room-image">
-                            <img src="https://images.pexels.com/photos/2725675/pexels-photo-2725675.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Ocean View Room" class="img-fluid">
-                        </div>
-                        <div class="room-details">
-                            <h3 class="room-title">Ocean View Room</h3>
-                            <p class="room-description">Beautiful room with breathtaking ocean views.</p>
-                            <span class="room-price">$120/night</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="room-item small-item">
-                    <a href="path-to-image-3.jpg" class="room-link" data-fancybox="gallery" data-caption="Garden Suite - $130/night">
-                        <div class="room-image">
-                            <img src="https://images.pexels.com/photos/2725675/pexels-photo-2725675.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Garden Suite" class="img-fluid">
-                        </div>
-                        <div class="room-details">
-                            <h3 class="room-title">Garden Suite</h3>
-                            <p class="room-description">Cozy suite with a private garden view.</p>
-                            <span class="room-price">$130/night</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="room-item small-item">
-                    <a href="path-to-image-3.jpg" class="room-link" data-fancybox="gallery" data-caption="Garden Suite - $130/night">
-                        <div class="room-image">
-                            <img src="https://images.pexels.com/photos/2725675/pexels-photo-2725675.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Garden Suite" class="img-fluid">
-                        </div>
-                        <div class="room-details">
-                            <h3 class="room-title">Garden Suite</h3>
-                            <p class="room-description">Cozy suite with a private garden view.</p>
-                            <span class="room-price">$130/night</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="room-item small-item">
-                    <a href="path-to-image-3.jpg" class="room-link" data-fancybox="gallery" data-caption="Garden Suite - $130/night">
-                        <div class="room-image">
-                            <img src="https://images.pexels.com/photos/2725675/pexels-photo-2725675.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Garden Suite" class="img-fluid">
-                        </div>
-                        <div class="room-details">
-                            <h3 class="room-title">Garden Suite</h3>
-                            <p class="room-description">Cozy suite with a private garden view.</p>
-                            <span class="room-price">$130/night</span>
-                        </div>
-                    </a>
-                </div>
-                <!-- Add more rooms with different item classes -->
-            </div>
-        </div>
     </section>
+    
+
+    <section id="room-gallery" class="room-gallery">
+        <div class="section-title text-center">
+          <h2>Our Rooms</h2>
+          <p>Discover the luxury and comfort of our rooms.</p>
+        </div>
+      
+        <div class="room-grid">
+          <!-- Room Item 1 -->
+          <div class="room-item large-item" data-fancybox="gallery" data-src="https://images.pexels.com/photos/2725675/pexels-photo-2725675.jpeg?auto=compress&cs=tinysrgb&w=600">
+            <div class="room-image">
+              <img src="https://images.pexels.com/photos/2725675/pexels-photo-2725675.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Luxury Suite">
+            </div>
+            <div class="room-details">
+              <h3 class="room-title">Luxury Suite</h3>
+              <p class="room-description">Spacious room with a king-sized bed and modern amenities.</p>
+              <p class="room-price">$250 per night</p>
+            </div>
+          </div>
+      
+          <!-- Room Item 2 -->
+          <div class="room-item medium-item" data-fancybox="gallery" data-src="https://images.pexels.com/photos/2725675/pexels-photo-2725675.jpeg?auto=compress&cs=tinysrgb&w=600">
+            <div class="room-image">
+              <img src="https://images.pexels.com/photos/2725675/pexels-photo-2725675.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Ocean View">
+            </div>
+            <div class="room-details">
+              <h3 class="room-title">Ocean View</h3>
+              <p class="room-description">Enjoy the breathtaking ocean view from your private balcony.</p>
+              <p class="room-price">$180 per night</p>
+            </div>
+          </div>
+      
+          <!-- Room Item 3 -->
+          <div class="room-item small-item" data-fancybox="gallery" data-src="https://images.pexels.com/photos/2725675/pexels-photo-2725675.jpeg?auto=compress&cs=tinysrgb&w=600">
+            <div class="room-image">
+              <img src="https://images.pexels.com/photos/2725675/pexels-photo-2725675.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Mountain Retreat">
+            </div>
+            <div class="room-details">
+              <h3 class="room-title">Mountain Retreat</h3>
+              <p class="room-description">A cozy retreat surrounded by stunning mountain views.</p>
+              <p class="room-price">$220 per night</p>
+            </div>
+          </div>
+      
+          <!-- Add more rooms here if needed -->
+      
+        </div>
+      </section>
 
     <section id="facilities" class="facilities">
         <div class="container">
@@ -249,14 +237,41 @@
     </footer>
 
     <!-- External JS Libraries -->
+    <script src="js/jquery.paroller.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
-    <script src="script.js"></script>
+
+    <script src="js/script.js"></script>
     <script>
-        $('.jumbotron').paroller();
+   $(document).ready(function() {
+    // Apply paroller to the first image for horizontal movement
+    $('.paroller-image img').paroller({
+        factor: 0.5,  // Horizontal speed for the first image
+        type: 'foreground',
+        direction: 'horizontal'  // Scroll horizontally as you scroll vertically
+    });
+
+    // Apply paroller to the second image with a slower scroll
+    $('.paroller-image-second img').paroller({
+        factor: 0.5,  // Horizontal speed for the second image
+        type: 'foreground',
+        direction: 'horizontal'  // Scroll horizontally for the second image
+    });
+});
+
+// Initialize Fancybox
+$(document).ready(function() {
+    $("[data-fancybox='gallery']").fancybox({
+        // Additional settings for Fancybox, such as navigation
+        animationEffect: "fade",
+        transitionEffect: "fade"
+    });
+});
+
+
         // Initialize AOS
 AOS.init();
 
