@@ -1,308 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <%- include("../partials/_head.ejs") %>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qmarshal - Engineering Urban Flow</title>
+    <meta name="description" content="Qmarshal is a reliable platform that simplifies urban mobility through real-time passenger tracking and quick pickup requests.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Navbar Section -->
-    <%- include("../partials/_nav.ejs") %>
+    <div id="three-canvas-container"></div>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="paroller-container">
-            <div class="paroller-image">
-                <img src="https://unsplash.it/1920/1200?image=249" alt="Hero Background" />
-            </div>
-            <div class="paroller-image-second">
-                <img src="https://unsplash.it/1920/1200?image=249" alt="Second Background" />
-            </div>
-        </div>
-    
-        <div class="hero-content">
-            <h1>Welcome to Serenade Palace</h1>
-            <p>Your peaceful escape awaits.</p>
-            <a href="#contact" class="cta-button">Book Your Stay</a>
-        </div>
-    </section>
+    <div id="preloader">
+        <div class="loader-visual"></div>
+        <p>Initializing Qmarshal Network...</p>
+    </div>
 
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <!-- About Image -->
-                <div class="col-lg-6" data-aos="fade-up">
-                    <div class="about-image">
-                        <img src="https://images.pexels.com/photos/1749303/pexels-photo-1749303.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Serenade Palace" class="img-fluid rounded shadow-lg">
-                    </div>
-                </div>
-                <!-- About Text -->
-                <div class="col-lg-6" data-aos="fade-up">
-                    <div class="about-text">
-                        <h2 class="section-title">About Serenade Palace</h2>
-                        <p>
-                            Welcome to Serenade Palace, a place where luxury meets tranquility. With stunning views and world-class amenities, we offer the perfect escape for those seeking comfort and elegance.
-                        </p>
-                        <p>
-                            From our spacious rooms to our attentive staff, every aspect of Serenade Palace is designed to provide you with an unforgettable experience. Whether you’re here for business or leisure, our hotel is the perfect choice for your next stay.
-                        </p>
-                        <a href="#services" class="btn btn-primary">Discover Our Services</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
+    <header id="main-header" class="container">
+        <div class="logo">Qmarshal</div>
+    </header>
 
-    <section id="room-gallery" class="room-gallery">
-        <div class="section-title text-center">
-          <h2>Our Rooms</h2>
-          <p>Discover the luxury and comfort of our rooms.</p>
-        </div>
-      
-        <div class="room-grid">
-          <!-- Room Item 1 -->
-          <div class="room-item large-item" data-fancybox="gallery" data-src="https://images.pexels.com/photos/2725675/pexels-photo-2725675.jpeg?auto=compress&cs=tinysrgb&w=600">
-            <div class="room-image">
-              <img src="https://images.pexels.com/photos/2725675/pexels-photo-2725675.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Luxury Suite">
-            </div>
-            <div class="room-details">
-              <h3 class="room-title">Luxury Suite</h3>
-              <p class="room-description">Spacious room with a king-sized bed and modern amenities.</p>
-              <p class="room-price">$250 per night</p>
-            </div>
-          </div>
-      
-          <!-- Room Item 2 -->
-          <div class="room-item medium-item" data-fancybox="gallery" data-src="https://images.pexels.com/photos/2725675/pexels-photo-2725675.jpeg?auto=compress&cs=tinysrgb&w=600">
-            <div class="room-image">
-              <img src="https://images.pexels.com/photos/2725675/pexels-photo-2725675.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Ocean View">
-            </div>
-            <div class="room-details">
-              <h3 class="room-title">Ocean View</h3>
-              <p class="room-description">Enjoy the breathtaking ocean view from your private balcony.</p>
-              <p class="room-price">$180 per night</p>
-            </div>
-          </div>
-      
-          <!-- Room Item 3 -->
-          <div class="room-item small-item" data-fancybox="gallery" data-src="https://images.pexels.com/photos/2725675/pexels-photo-2725675.jpeg?auto=compress&cs=tinysrgb&w=600">
-            <div class="room-image">
-              <img src="https://images.pexels.com/photos/2725675/pexels-photo-2725675.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Mountain Retreat">
-            </div>
-            <div class="room-details">
-              <h3 class="room-title">Mountain Retreat</h3>
-              <p class="room-description">A cozy retreat surrounded by stunning mountain views.</p>
-              <p class="room-price">$220 per night</p>
-            </div>
-          </div>
-      
-          <!-- Add more rooms here if needed -->
-      
-        </div>
-      </section>
+    <main id="scroll-container">
 
-    <section id="facilities" class="facilities">
-        <div class="container">
-            <div class="section-title text-center" data-aos="fade-up">
-                <h2>Our Facilities</h2>
-                <p>Experience world-class amenities at Serenade Palace</p>
+        <section id="hero" class="scroll-section full-height">
+            <div class="content-layer text-center">
+                <h1 class="main-headline">Re-Engineering<br>Urban <span class="highlight-blue">Mobility</span>.</h1>
+                <p class="subtitle">Track, request, and ride — all in real time.</p>
             </div>
-            <div class="row facilities-box">
-                <!-- Facility 1 -->
-                <div class="col-md-4 facility-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="facility-icon">
-                        <i class="fas fa-spa"></i>
-                    </div>
-                    <div class="facility-info">
-                        <h4 class="facility-title">Spa & Wellness</h4>
-                        <p class="facility-description">Unwind and rejuvenate at our luxurious spa with professional treatments.</p>
-                    </div>
-                </div>
-                <!-- Facility 2 -->
-                <div class="col-md-4 facility-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="facility-icon">
-                        <i class="fas fa-pool"></i>
-                    </div>
-                    <div class="facility-info">
-                        <h4 class="facility-title">Infinity Pool</h4>
-                        <p class="facility-description">Take a dip in our stunning infinity pool with panoramic views.</p>
-                    </div>
-                </div>
-                <!-- Facility 3 -->
-                <div class="col-md-4 facility-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="facility-icon">
-                        <i class="fas fa-dumbbell"></i>
-                    </div>
-                    <div class="facility-info">
-                        <h4 class="facility-title">Fitness Center</h4>
-                        <p class="facility-description">Stay fit and healthy with state-of-the-art equipment at our fitness center.</p>
-                    </div>
-                </div>
-                <!-- Facility 4 -->
-                <div class="col-md-4 facility-item" data-aos="fade-up" data-aos-delay="400">
-                    <div class="facility-icon">
-                        <i class="fas fa-utensils"></i>
-                    </div>
-                    <div class="facility-info">
-                        <h4 class="facility-title">Gourmet Dining</h4>
-                        <p class="facility-description">Indulge in exquisite dishes prepared by our expert chefs in a luxurious setting.</p>
-                    </div>
-                </div>
-                <!-- Facility 5 -->
-                <div class="col-md-4 facility-item" data-aos="fade-up" data-aos-delay="500">
-                    <div class="facility-icon">
-                        <i class="fas fa-wifi"></i>
-                    </div>
-                    <div class="facility-info">
-                        <h4 class="facility-title">High-Speed Wi-Fi</h4>
-                        <p class="facility-description">Enjoy fast and reliable internet throughout the entire hotel.</p>
-                    </div>
-                </div>
-                <!-- Facility 6 -->
-                <div class="col-md-4 facility-item" data-aos="fade-up" data-aos-delay="600">
-                    <div class="facility-icon">
-                        <i class="fas fa-bus"></i>
-                    </div>
-                    <div class="facility-info">
-                        <h4 class="facility-title">Transport Service</h4>
-                        <p class="facility-description">We provide comfortable transport options for your convenience.</p>
-                    </div>
-                </div>
+            <div class="scroll-indicator">
+                <span>Scroll Down</span>
+                <div class="arrow">↓</div>
             </div>
-        </div>
-    </section>
-    
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-title text-center" data-aos="fade-up">
-                <h2>Contact Us</h2>
-                <p>Get in touch with us for bookings or inquiries</p>
-            </div>
-            <div class="row">
-                <!-- Contact Details -->
-                <div class="col-lg-6 contact-info" data-aos="fade-right" data-aos-delay="100">
-                    <h4>Our Contact Information</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> Serenade Palace, 123 Dreamland Avenue, Cityville</p>
-                    <p><i class="fas fa-phone"></i> +123 456 7890</p>
-                    <p><i class="fas fa-envelope"></i> info@serenadepalace.com</p>
-                </div>
-                <!-- Contact Form -->
-                <div class="col-lg-6 contact-form" data-aos="fade-left" data-aos-delay="200">
-                    <h4>Send Us a Message</h4>
-                    <form action="/submit-form" method="POST" id="contact-form">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Your Email</label>
-                            <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea id="message" class="form-control" rows="5" placeholder="Your message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Modern Footer Section -->
-    <footer class="footer bg-dark text-light py-5">
-        <div class="container text-center">
-            <h5>Serenade Palace</h5>
-            <p class="mb-4">Escape to tranquility at Golden Fields, your perfect getaway destination.</p>
+        </section>
 
-            <!-- Footer Navigation Links -->
-            <div class="footer-links mb-4">
-                <a href="#" class="text-light me-3">Home</a>
-                <a href="#about" class="text-light me-3">About</a>
-                <a href="#rooms" class="text-light me-3">Rooms</a>
-                <a href="#contact" class="text-light">Contact</a>
+        <section id="network" class="scroll-section content-section">
+            <div class="content-layer text-content">
+                <h2 class="section-title">Reliable <span class="highlight-magenta">Connections</span></h2>
+                <p>Qmarshal brings passengers and drivers together with speed and reliability. Every ride request is handled in real time for faster pickups and smoother trips.</p>
+                <ul>
+                    <li><i class="fas fa-location-arrow"></i> Real-Time Passenger Tracking</li>
+                    <li><i class="fas fa-taxi"></i> Quick and Simple Ride Requests</li>
+                    <li><i class="fas fa-route"></i> Smarter Route Coordination</li>
+                </ul>
             </div>
+        </section>
 
-            <!-- Social Media Links -->
-            <div class="footer-socials mb-4">
-                <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="text-light"><i class="fab fa-youtube"></i></a>
+        <section id="experience" class="scroll-section content-section">
+            <div class="content-layer text-content text-right">
+                <h2 class="section-title">Seamless <span class="highlight-blue">Experience</span></h2>
+                <p>From booking to drop-off, Qmarshal makes it easy. The app is designed for both riders and drivers, making every interaction smooth and efficient.</p>
+                <ul>
+                    <li><i class="fas fa-mobile-alt"></i> Easy-To-Use Interface</li>
+                    <li><i class="fas fa-bell"></i> Instant Notifications</li>
+                    <li><i class="fas fa-check-circle"></i> Ride Confirmation in Seconds</li>
+                </ul>
             </div>
+        </section>
 
-            <p>&copy; 2025 Serenade Palace. All Rights Reserved.</p>
-            <p><a href="#" class="text-light">Privacy Policy</a> | <a href="#" class="text-light">Terms & Conditions</a></p>
-        </div>
+        <section id="trust" class="scroll-section content-section">
+            <div class="content-layer text-content">
+                <h2 class="section-title">Built on <span class="highlight-magenta">Trust</span></h2>
+                <p>Qmarshal focuses on reliability. With clear trip tracking and verified users, every ride is safer and more dependable.</p>
+                <ul>
+                    <li><i class="fas fa-user-check"></i> Verified Drivers</li>
+                    <li><i class="fas fa-clock"></i> Live Trip Updates</li>
+                    <li><i class="fas fa-headset"></i> Support When You Need It</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="download" class="scroll-section full-height final-cta">
+            <div class="content-layer text-center">
+                <h2 class="cta-headline">Experience <span class="highlight-magenta">Qmarshal</span>.</h2>
+                <p class="subtitle">Download now and discover a better way to move through your city.</p>
+                <div class="download-buttons">
+                    <a href="assets/app/Qmarshal_App.zip" class="btn btn-primary btn-lg download-button" download>
+                        <i class="fas fa-download me-2"></i> Direct Download
+                    </a>
+                </div>
+                <p class="disclaimer mt-3"><small>(App Store / Play Store version coming soon.)</small></p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="main-footer">
+        &copy; <span id="current-year"></span> Qmarshal Technologies.
     </footer>
 
-    <!-- External JS Libraries -->
-    <script src="js/jquery.paroller.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-
-    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script type="module" src="js/three-scene.js"></script>
+    <script type="module" src="js/main.js"></script>
     <script>
-   $(document).ready(function() {
-    // Apply paroller to the first image for horizontal movement
-    $('.paroller-image img').paroller({
-        factor: 0.5,  // Horizontal speed for the first image
-        type: 'foreground',
-        direction: 'horizontal'  // Scroll horizontally as you scroll vertically
-    });
-
-    // Apply paroller to the second image with a slower scroll
-    $('.paroller-image-second img').paroller({
-        factor: 0.5,  // Horizontal speed for the second image
-        type: 'foreground',
-        direction: 'horizontal'  // Scroll horizontally for the second image
-    });
-});
-
-// Initialize Fancybox
-$(document).ready(function() {
-    $("[data-fancybox='gallery']").fancybox({
-        // Additional settings for Fancybox, such as navigation
-        animationEffect: "fade",
-        transitionEffect: "fade"
-    });
-});
-
-
-        // Initialize AOS
-AOS.init();
-
-// Initialize Swiper
-const swiper = new Swiper('.swiper-container', {
-    loop: true,
-    autoplay: {
-        delay: 3000,
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-});
-
-// Form Validation with Toastr Notifications
-document.getElementById('contactForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-    
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    
-    if (!name || !email || !message) {
-        toastr.error('All fields are required!');
-    } else {
-        toastr.success('Message sent successfully!');
-        this.reset();
-    }
-});
-
+        // Simple script to set the current year in the footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
+
 </body>
 </html>
